@@ -1,1 +1,3 @@
-loops in python
+loop For in python
+indentation
+range function
