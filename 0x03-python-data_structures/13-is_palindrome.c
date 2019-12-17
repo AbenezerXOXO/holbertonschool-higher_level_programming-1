@@ -10,6 +10,8 @@ int is_palindrome(listint_t **head)
 	size_t len, i;
 	listint_t *node1, *node2;
 
+	if (!head)
+		return (1);
 	len = listint_len(*head);
 	if (!len)
 		return (1);
