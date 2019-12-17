@@ -10,11 +10,9 @@ int is_palindrome(listint_t **head)
 	size_t len, i;
 	listint_t *node1, *node2;
 
-	if (!head)
+	if (!head || !(*head))
 		return (1);
 	len = listint_len(*head);
-	if (!len)
-		return (1);
 	for (i = 0; i < (len / 2); i++)
 	{
 		node1 = get_nodeint_at_index(*head, i);
