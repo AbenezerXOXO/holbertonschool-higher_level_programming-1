@@ -34,8 +34,6 @@ size_t listint_len(listint_t *h)
 	size_t count = 0;
 
 	tmp = h;
-	if (h == NULL)
-		return (0);
 	while (tmp)
 	{
 		count++;
@@ -54,9 +52,6 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 {
 	unsigned int i = 0;
 	listint_t *nth;
-
-	if (head == NULL)
-		return (0);
 
 	nth = head;
 	while (i < index)
