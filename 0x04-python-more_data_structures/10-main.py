@@ -7,3 +7,6 @@ print("Best score: {}".format(best_key))
 
 best_key = best_score(None)
 print("Best score: {}".format(best_key))
+a = {'joe': 5}
+print(best_score(a))
+print(best_score({'joe': 5, 'Mariem': 20}))
