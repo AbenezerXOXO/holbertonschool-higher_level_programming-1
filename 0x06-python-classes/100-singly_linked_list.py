@@ -42,7 +42,8 @@ class SinglyLinkedList:
             self.__head = node
         else:
             tmp = self.__head
-            if tmp.data > node.data:
+            if node.data < tmp.data or \
+                    (node.data == tmp.data and node.data < tmp.next_node.data):
                 node.next_node = tmp
                 self.__head = node
             else:
