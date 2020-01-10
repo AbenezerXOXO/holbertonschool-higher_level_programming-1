@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 class MagicClass:
     """ Magic Class """
-    def __init__(self, radius):
+    def __init__(self, radius=0):
         """ init to get the radius """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
