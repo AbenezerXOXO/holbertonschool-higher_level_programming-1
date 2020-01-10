@@ -42,18 +42,23 @@ class SinglyLinkedList:
             self.__head = node
         else:
             tmp = self.__head
-            if tmp.next_node is None:
-                if tmp.data < value:
-                    tmp.next_node(node)
-                else:
-                    node.next_node(tmp)
-                    self.__head = node
-            prev = tmp
-            while tmp.data < value and tmp is not None:
-                prev = tmp
-                tmp = tmp.next_node
-            node.next_node(tmp)
-            if (prev != self.__head):
-                prev.next_node(node)
-            else:
+            if tmp.data > node.data:
+                node.next_node = tmp
                 self.__head = node
+            else:
+                prev = tmp
+                while tmp is not None and tmp.data < value:
+                    prev = tmp
+                    tmp = tmp.next_node
+                node.next_node = tmp
+                prev.next_node = node
+
+    def __str__(self):
+        ch = ""
+        tmp = self.__head
+        while tmp is not None:
+            ch += str(tmp.data)
+            ch += "\n"
+            tmp = tmp.next_node
+        ch = ch[:-1]
+        return ch
