@@ -4,6 +4,12 @@
 >>> ma([[1, 2.0, 3], [4.0, 5.0, 6]], 3.5)
 [[0.29, 0.57, 0.86], [1.14, 1.43, 1.71]]
 >>> try:
+...     ma([[]], 200)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
 ...     ma(None, 1)
 ... except Exception as e:
 ...     print(e)
@@ -45,5 +51,3 @@ division by zero
 ...     print(e)
 ...
 div must be a number
->>> ma([[]], 1)
-[[]]
