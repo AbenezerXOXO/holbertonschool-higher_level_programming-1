@@ -65,3 +65,14 @@ def matrix_mul(m_a, m_b):
         raise ValueError(msgMul)
         return
     product = []
+    for i in range(0, len(m_a)):
+        row = []
+        for z in range(0, len(m_b[0])):
+            somme = 0
+            j = 0
+            for x in m_a[i]:
+                somme += x * m_b[j][z]
+                j += 1
+            row.append(somme)
+        product.append(row)
+    return product
