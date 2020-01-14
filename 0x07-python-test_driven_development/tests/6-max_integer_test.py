@@ -18,6 +18,7 @@ class testlist(unittest.TestCase):
         self.assertEqual(max_integer([5, 7, 9, 8, 9, 1]), 9)
         self.assertEqual(max_integer("helloez"), "z")
         self.assertEqual(max_integer([[5, 0], [4, 20]]), [5, 0])
+        self.assertEqual(max_integer([1]), 1)
         self.assertEqual(max_integer(""), None)
         self.assertEqual(max_integer([]), None)
         self.assertEqual(max_integer(), None)
