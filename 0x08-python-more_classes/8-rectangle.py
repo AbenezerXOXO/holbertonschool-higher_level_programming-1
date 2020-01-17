@@ -8,6 +8,8 @@ class Rectangle:
     """ class Rectangle """
     number_of_instances = 0
 
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """ instantiation """
         self.width = width
@@ -59,7 +61,7 @@ class Rectangle:
             return ch
         for i in range(self.__height):
             for j in range(self.__width):
-                ch += "#"
+                ch += str(self.print_symbol)
             ch += '\n'
         return ch[:-1]
 
@@ -71,3 +73,15 @@ class Rectangle:
         """ called when an object is deleted with del """
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """ returns the biggest rectangle based on the area """
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        else:
+            return rect_2
