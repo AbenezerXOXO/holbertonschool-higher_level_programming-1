@@ -6,7 +6,7 @@ def add_attribute(obj, name, value):
     """
     adds a new attribute to an object if it’s possible
     """
-    if obj.__class__.__module__ ==  '__builtin__':
+    if type(obj) in [str, int, bool, set, tuple, list]:
         raise TypeError("can't add new attribute")
     else:
         obj.name = value
