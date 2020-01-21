@@ -1,0 +1,33 @@
+>>> ml = __import__('1-my_list').MyList
+>>> L = ml()
+>>> L.append(1)
+>>> L.append(9)
+>>> L.append(8)
+>>> L.append(2)
+>>> L.print_sorted()
+[1, 2, 8, 9]
+>>> L = ml()
+>>> L.append('h')
+>>> L.append('e')
+>>> L.append('r')
+>>> L.append('d')
+>>> L.print_sorted()
+['d', 'e', 'h', 'r']
+>>> L = ml()
+>>> L.append("hello")
+>>> L.append("there")
+>>> L.append(10)
+>>> L.append('z')
+>>> L.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: '<' not supported between instances of 'int' and 'str'
+>>> L = ml()
+>>> L.append([1, 2])
+>>> L.append('e')
+>>> L.append(5)
+>>> L.append(10)
+>>> L.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: '<' not supported between instances of 'str' and 'list'
