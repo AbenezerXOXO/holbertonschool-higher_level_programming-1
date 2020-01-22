@@ -17,5 +17,6 @@ def pascal_triangle(n):
         small = [1, ]
         for j in range(0, len(big[-1]) - 1):
             small.append(big[-1][j] + big[-1][j + 1])
+        small.append(1)
         big.append(small)
     return big
