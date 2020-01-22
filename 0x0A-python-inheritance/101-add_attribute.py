@@ -8,5 +8,7 @@ def add_attribute(obj, name, value):
     """
     if type(obj) in [str, int, float, complex, bool, set, tuple, list]:
         raise TypeError("can't add new attribute")
+    if not hasattr(obj, name):
+        raise TypeError("can't add new attribute")
     else:
         setattr(obj, name, value)
