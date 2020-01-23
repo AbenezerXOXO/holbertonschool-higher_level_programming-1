@@ -9,6 +9,9 @@
 >>> L = ml(['h', 'e', 'r', 'd'])
 >>> L.print_sorted()
 ['d', 'e', 'h', 'r']
+>>> L = ml(['h', 'e', 'r', 'd'])
+>>> print(L)
+['h', 'e', 'r', 'd']
 >>> L = ml(["hello", "how", "are", "you"])
 >>> L.print_sorted()
 ['are', 'hello', 'how', 'you']
