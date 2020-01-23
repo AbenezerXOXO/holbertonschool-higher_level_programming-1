@@ -30,3 +30,6 @@
 >>> L = ml()
 >>> L.print_sorted()
 []
+>>> L = ml([1, 2])
+>>> print(L)
+[1, 2]
