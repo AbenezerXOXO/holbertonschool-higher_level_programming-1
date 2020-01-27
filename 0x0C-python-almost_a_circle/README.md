@@ -1,4 +1,4 @@
-This project will help us be ready for the AirBnB project.\
+This project will help us be ready for the AirBnB project.
 
 In this project, we will review everything we saw about Python:
 
@@ -11,7 +11,8 @@ In this project, we will review everything we saw about Python:
 * Static method
 * Inheritance
 * Unittest
-* Read/Write file\
+* Read/Write file
+
 We will also learn about:
 * args and kwargs
 * Serialization/Deserialization
