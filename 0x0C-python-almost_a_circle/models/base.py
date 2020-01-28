@@ -52,7 +52,5 @@ class Base:
         """ returns an instance with all attributes already set """
         if cls.__name__ == "Rectangle" or cls.__name__ == "Square":
             m = cls(5, 5, 5, 5)
-        else:
-            m = cls(5)
         m.update(**dictionary)
         return m
