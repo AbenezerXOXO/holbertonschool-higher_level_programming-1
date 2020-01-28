@@ -106,12 +106,18 @@ class Base:
                 l = []
                 if cls.__name__ == "Rectangle":
                     for i in rs:
-                        r = cls(int(i[1]), int(i[2]), int(i[3]),int(i[4]),int(i[0]))
+                        r = cls(
+                                int(i[1]),
+                                int(i[2]),
+                                int(i[3]),
+                                int(i[4]),
+                                int(i[0])
+                                )
                         l.append(r)
                     return l
                 elif cls.__name__ == "Square":
                     for i in rs:
-                        r = cls(int(i[1]), int(i[2]), int(i[3]),int(i[0]))
+                        r = cls(int(i[1]), int(i[2]), int(i[3]), int(i[0]))
                         l.append(r)
                     return l
         except:
