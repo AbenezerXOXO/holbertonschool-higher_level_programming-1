@@ -33,8 +33,3 @@ class Base:
         """writes the JSON string representation of list_objs to a file"""
         with open(cls.__name__ + ".json", "w") as f:
             f.write(cls.to_json_string(list_objs))
-            
-
-
-
-
