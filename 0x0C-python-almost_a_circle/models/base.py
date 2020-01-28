@@ -3,6 +3,7 @@
 This module contains one class: Base
 """
 import json
+import csv
 
 
 class Base:
@@ -70,5 +71,48 @@ class Base:
                 for i in ls:
                     l.append(cls.create(**i))
                 return l
+        except:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes the JSON string representation of list_objs to a file"""
+        with open(cls.__name__ + ".csv", "w") as f:
+            cwriter = csv.writer(f, delimiter=',')
+            for obj in list_objs:
+                my_l = []
+                if cls.__name__ == "Rectangle":
+                    my_l.append(obj.id)
+                    my_l.append(obj.width)
+                    my_l.append(obj.height)
+                    my_l.append(obj.x)
+                    my_l.append(obj.y)
+                elif cls.__name__ == "Square":
+                    my_l.append(obj.id)
+                    my_l.append(obj.size)
+                    my_l.append(obj.x)
+                    my_l.append(obj.y)
+                cwriter.writerow(my_l)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """
+        reads a csv file and returns the list of instances
+        that exist in the file
+        """
+        try:
+            with open(cls.__name__ + ".csv", "r") as f:
+                rs = csv.reader(f, delimiter=',')
+                l = []
+                if cls.__name__ == "Rectangle":
+                    for i in rs:
+                        r = cls(int(i[1]), int(i[2]), int(i[3]),int(i[4]),int(i[0]))
+                        l.append(r)
+                    return l
+                elif cls.__name__ == "Square":
+                    for i in rs:
+                        r = cls(int(i[1]), int(i[2]), int(i[3]),int(i[0]))
+                        l.append(r)
+                    return l
         except:
             return []
