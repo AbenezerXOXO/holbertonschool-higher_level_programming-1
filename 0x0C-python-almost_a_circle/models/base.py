@@ -76,7 +76,7 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """writes the JSON string representation of list_objs to a file"""
+        """writes attributes of list_objs to a csv file"""
         with open(cls.__name__ + ".csv", "w") as f:
             cwriter = csv.writer(f, delimiter=',')
             for obj in list_objs:
