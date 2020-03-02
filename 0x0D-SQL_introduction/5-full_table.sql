@@ -1,2 +1,2 @@
 -- a script that describes a table in the current database in the MySQL server
-DESC first_table;
+SHOW FROM first_table;
