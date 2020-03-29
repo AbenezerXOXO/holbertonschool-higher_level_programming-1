@@ -14,7 +14,7 @@ def main(argv):
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for st in session.query(State).order_by(asc(State.id)).all():
+    for st in session.query(State).order_by(asc(State.id)):
         print("{}: {}".format(st.id, st.name))
         for c in st.cities:
             print("\t{}: {}".format(c.id, c.name))
