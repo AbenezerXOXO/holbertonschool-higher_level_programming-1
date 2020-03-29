@@ -8,6 +8,8 @@ from sqlalchemy.ext.declarative import declarative_base
 
 
 Base = declarative_base()
+
+
 class City(Base):
     """ the City class will be mapped to the mysql table cities """
     __tablename__ = 'cities'
