@@ -17,6 +17,7 @@ def main(argv):
     p = State(name='California')
     c = City(name='San Francisco')
     p.cities.append(c)
+    session.add(p)
     session.commit()
     session.close()
 
