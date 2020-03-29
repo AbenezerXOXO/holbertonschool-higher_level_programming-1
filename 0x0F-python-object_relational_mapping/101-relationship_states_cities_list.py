@@ -3,7 +3,7 @@
 from the database hbtn_0e_100_usa """
 from sys import argv
 from relationship_state import Base, State, City
-from sqlalchemy import create_engine, asc
+from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 
@@ -14,10 +14,10 @@ def main(argv):
     Base.metadata.create_all(engine)
     Session = sessionmaker(bind=engine)
     session = Session()
-    for st in session.query(State).order_by(asc(State.id)):
-        print(st.id, ': ', st.name)
+    for st in session.query(State).order_by(State.id.asc()):
+        print(st.id, ': ', st.name, sep='')
         for c in st.cities:
-            print("\t", c.id, ': ', c.name)
+            print("\t", c.id, ': ', c.name, sep='')
     session.close()
 
 
