@@ -14,7 +14,10 @@ def main(argv):
     Session = sessionmaker(bind=engine)
     session = Session()
     instance = session.query(State).first()
-    print(str(instance.id) + ': ' + instance.name)
+    if instance is None:
+        print("Nothing")
+    else:
+        print(str(instance.id) + ': ' + instance.name)
     session.close()
 
 
