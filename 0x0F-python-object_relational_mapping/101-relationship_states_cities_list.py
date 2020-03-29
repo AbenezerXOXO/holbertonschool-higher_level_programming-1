@@ -15,9 +15,9 @@ def main(argv):
     Session = sessionmaker(bind=engine)
     session = Session()
     for st in session.query(State).order_by(asc(State.id)):
-        print("{}: {}".format(st.id, st.name))
+        print(st.id, ': ', st.name)
         for c in st.cities:
-            print("\t{}: {}".format(c.id, c.name))
+            print("\t", c.id, ': ', c.name)
     session.close()
 
 
