@@ -2,7 +2,7 @@
 """ a script that all State objects, and corresponding City objects
 from the database hbtn_0e_100_usa """
 from sys import argv
-from relationship_state import Base, State, City
+from relationship_state import Base, State
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
