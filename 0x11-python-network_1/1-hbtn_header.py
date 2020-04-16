@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a Python script that fetches https://intranet.hbtn.io/status """
+""" a Python script that displays a header value """
 import urllib.request
 import sys
 
