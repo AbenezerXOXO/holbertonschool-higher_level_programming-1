@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a Python script that displays a header value """
+""" a Python script that displays the error code """
 import urllib.request
 import sys
 
