@@ -10,9 +10,6 @@ if __name__ == '__main__':
     url = 'https://api.github.com/repos/' + sys.argv[1] + '/' + sys.argv[2] + \
           '/commits'
     r = requests.get(url)
-    try:
-        for i in range(10):
-            print("{}: {}".format(r.json()[i]['sha'],
-                                  r.json()[i]['commit']['author']['name']))
-    except (IndexError, KeyError):
-        pass
+    for i in r.json()[:10]:
+        print("{}: {}".format(i['sha'],
+                              i['commit']['author']['name']))
