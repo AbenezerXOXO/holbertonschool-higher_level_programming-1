@@ -1,8 +1,8 @@
 #!/usr/bin/node
 const request = require('request');
 request.get(process.argv[2], function (error, response, body) {
-  if (error) throw error;
-  else {
+  if (error) console.log(error);
+  else if (response.statusCode === 200) {
     let c = 0;
     const results = JSON.parse(body).results;
     const wedge = 'https://swapi-api.hbtn.io/api/people/18/';
