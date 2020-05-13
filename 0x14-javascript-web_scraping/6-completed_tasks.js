@@ -10,8 +10,6 @@ request.get(process.argv[2], function (error, response, body) {
         dict[user.userId] += 1;
       } else if (!(user.userId in dict) && user.completed === true) {
         dict[user.userId] = 1;
-      } else if (!(user.userId in dict) && user.completed === false) {
-        dict[user.userId] = 0;
       }
     }
     console.log(dict);
